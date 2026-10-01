@@ -1,0 +1,28 @@
+project_id = "samm-ai-marketplace"
+
+[api]
+port = 54321
+extra_search_path = ["public", "extensions"]
+
+[db]
+port = 54322
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["https://sammai.store"]
+jwt_expiry = 3600
+
+[storage]
+file_size_limit = "50MiB"
+
+[functions.create-payment]
+verify_jwt = false
+
+[functions.verify-payment]
+verify_jwt = false
+
+[functions.paystack-webhook]
+verify_jwt = false
+
+[functions.fulfill-order]
+verify_jwt = true

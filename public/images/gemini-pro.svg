@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="geminiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="45%" stop-color="#0b102b" />
+      <stop offset="100%" stop-color="#030611" />
+    </linearGradient>
+
+    <!-- Gemini Spark Gradient -->
+    <linearGradient id="geminiSparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4e82ee" />
+      <stop offset="40%" stop-color="#9b72cf" />
+      <stop offset="70%" stop-color="#d96570" />
+      <stop offset="100%" stop-color="#1ea1f2" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="geminiGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="30" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <radialGradient id="geminiAura" cx="50%" cy="42%" r="40%">
+      <stop offset="0%" stop-color="#5188f6" stop-opacity="0.32" />
+      <stop offset="50%" stop-color="#9b72cf" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#050814" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#geminiBg)" />
+  <rect width="1600" height="900" fill="url(#geminiAura)" />
+
+  <!-- Subtle star particles -->
+  <g opacity="0.3" fill="#ffffff">
+    <circle cx="280" cy="180" r="2" />
+    <circle cx="420" cy="320" r="1.5" />
+    <circle cx="1200" cy="220" r="2.5" />
+    <circle cx="1350" cy="360" r="1.5" />
+    <circle cx="340" cy="620" r="2" />
+    <circle cx="1280" cy="680" r="2" />
+  </g>
+
+  <!-- Central Gemini Spark Icon -->
+  <g transform="translate(800, 310)" filter="url(#geminiGlow)">
+    <!-- 4-pointed Gemini Astro Spark -->
+    <path d="M0 -150 C12 -45, 45 -12, 150 0 C45 12, 12 45, 0 150 C-12 45, -45 12, -150 0 C-45 -12, -12 -45, 0 -150 Z" fill="url(#geminiSparkGrad)" />
+    <!-- Center white core spark -->
+    <circle cx="0" cy="0" r="18" fill="#ffffff" opacity="0.9" />
+  </g>
+
+  <!-- Brand Typography -->
+  <g text-anchor="middle">
+    <text x="800" y="580" fill="#ffffff" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="900" letter-spacing="2">
+      Google Gemini AI Pro
+    </text>
+
+    <text x="800" y="622" fill="#7ba3f8" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="700" letter-spacing="4">
+      POWERED BY GOOGLE DEEPMIND · 18 MONTHS ACCESS
+    </text>
+
+    <!-- Feature Badges -->
+    <g transform="translate(420, 660)">
+      <g transform="translate(0, 0)">
+        <rect width="180" height="38" rx="19" fill="#0d1433" stroke="#4e82ee" stroke-width="1.5" stroke-opacity="0.4" />
+        <text x="90" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">✦ 2M Token Context</text>
+      </g>
+
+      <g transform="translate(195, 0)">
+        <rect width="180" height="38" rx="19" fill="#0d1433" stroke="#9b72cf" stroke-width="1.5" stroke-opacity="0.4" />
+        <text x="90" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">✦ Imagen 3 HD Art</text>
+      </g>
+
+      <g transform="translate(390, 0)">
+        <rect width="180" height="38" rx="19" fill="#0d1433" stroke="#4e82ee" stroke-width="1.5" stroke-opacity="0.4" />
+        <text x="90" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">✦ Python Code Sandbox</text>
+      </g>
+
+      <g transform="translate(585, 0)">
+        <rect width="180" height="38" rx="19" fill="#0d1433" stroke="#9b72cf" stroke-width="1.5" stroke-opacity="0.4" />
+        <text x="90" y="24" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700">✦ Workspace Sync</text>
+      </g>
+    </g>
+  </g>
+</svg>

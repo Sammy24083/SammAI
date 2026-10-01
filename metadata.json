@@ -1,0 +1,6 @@
+{
+  "name": "SAMM AI - Premium AI & Digital Tool Marketplace",
+  "description": "Africa's trusted digital AI tools and subscription marketplace for students, creators, developers, and businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
